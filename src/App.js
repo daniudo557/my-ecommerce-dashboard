@@ -1,12 +1,15 @@
 import React from 'react'
 import GlobalStyle from './styles/global'
 import { Container } from './styles'
+import Layout from './components/layout'
 
-function App() {
+function App () {
   return (
-    <Container>
-      <GlobalStyle />
-    </Container>
+    <Layout>
+      <Container>
+        <GlobalStyle />
+      </Container>
+    </Layout>
   )
 }
 
