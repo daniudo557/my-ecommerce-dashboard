@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Sidebar from '../sidebar'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faStar } from '@fortawesome/free-solid-svg-icons'
 const Layout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(true)
 
@@ -9,15 +10,22 @@ const Layout = ({ children }) => {
       itemsArray.map((item, index) => {
         return (
           <div key={index} style={{ backgroundColor: 'red', height: 20, alignSelf: 'center' }}>
-            <a key='0' href=''><i className='fa fa-fw fa-star-o' />
-              <span>{item}</span>
+            <a key='0' href=''>
+              <FontAwesomeIcon color='#fff' icon={item.icon} />
+              <span>{item.text}</span>
             </a>
           </div>
         )
       }))
   }
   const sideBarMenu = () => {
-    const itemsArray = ['Favoritos', 'Alertas', 'Mensagens', 'Comentários', 'Analytics']
+    const itemsArray = [
+      { text: 'Favoritos', icon: faStar },
+      { text: 'Alertas', icon: faCoffee },
+      { text: 'Mensagens', icon: faStar },
+      { text: 'Comentários', icon: faStar },
+      { text: 'Analytics', icon: faStar }
+    ]
 
     return (
       <Sidebar
