@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
           <>
             <Link
               style={{ justifyContent: !sidebarOpen && 'center' }}
-              key={index} href='#'
+              key={index} href={item.href}
             >
               <FontAwesomeIcon style={{ alignItems: 'flex-start', fontSize: 30 }} color='#fff' icon={item.icon} />
               {(!isMobile && sidebarOpen) && <Label>{item.text}</Label>}
@@ -29,11 +29,11 @@ const Layout = ({ children }) => {
   }
   const sideBarMenu = () => {
     const itemsArray = [
-      { text: 'Favoritos', icon: faStar },
-      { text: 'Alertas', icon: faCoffee },
-      { text: 'Mensagens', icon: faStar },
-      { text: 'Comentários', icon: faStar },
-      { text: 'Analytics', icon: faChartBar }
+      { text: 'Favoritos', icon: faStar, href: '#favorites' },
+      { text: 'Alertas', icon: faCoffee, href: '#alerts' },
+      { text: 'Mensagens', icon: faStar, href: '#messages' },
+      { text: 'Comentários', icon: faStar, href: '#comments' },
+      { text: 'Analytics', icon: faChartBar, href: '#analytics' }
     ]
 
     return (
