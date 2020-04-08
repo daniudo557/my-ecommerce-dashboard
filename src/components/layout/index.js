@@ -2,8 +2,11 @@ import React, { useState } from 'react'
 import Sidebar from '../sidebar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faStar } from '@fortawesome/free-solid-svg-icons'
+import useWindowDimensions from '../../functions/functions'
+
 const Layout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(true)
+  const { width } = useWindowDimensions()
 
   const renderSideBarItems = (itemsArray) => {
     return (
@@ -12,7 +15,7 @@ const Layout = ({ children }) => {
           <div key={index} style={{ backgroundColor: 'red', height: 20, alignSelf: 'center' }}>
             <a key='0' href=''>
               <FontAwesomeIcon color='#fff' icon={item.icon} />
-              <span>{item.text}</span>
+              {(width > 812 && sidebarOpen) && <span>{item.text}</span>}
             </a>
           </div>
         )
