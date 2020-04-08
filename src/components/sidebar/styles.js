@@ -3,11 +3,8 @@ import styled from 'styled-components'
 export const BigSidebar = styled.div`
   height: 100%;
   background-color: navy;
-  opacity: 0.8;
   color: white;
   width: 260px;
-  position: fixed;
-  z-index: 200;
 
   @media screen and (max-width: 812px) {
     background-color:red;
