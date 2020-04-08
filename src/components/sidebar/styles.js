@@ -17,7 +17,6 @@ export const BigSidebar = styled.div`
 
 export const LittleSidebar = styled.div`
   height: 100%;
-  padding-left: 20px;
   background-color: navy;
   opacity: 0.8;
   color: black;
