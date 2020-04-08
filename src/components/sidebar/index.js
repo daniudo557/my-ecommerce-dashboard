@@ -1,19 +1,9 @@
 import React from 'react'
 import { BigSidebar, LittleSidebar } from './styles'
 
-const Sidebar = ({ children, isOpen, toggleSidebar }) => {
-  const renderContent = () => {
-    return (
-      <>
-        <button
-          onClick={() => toggleSidebar(!isOpen)}
-        >
-        close
-        </button>
-        <div>{children}</div>
-      </>
-    )
-  }
+const Sidebar = ({ children, isOpen }) => {
+  const renderContent = () => <div>{children}</div>
+
   return (
     isOpen
       ? <BigSidebar>{renderContent()}</BigSidebar>

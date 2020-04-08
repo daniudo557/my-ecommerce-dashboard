@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faCoffee, faStar, faBars, faChartBar } from '@fortawesome/free-solid-svg-icons'
 
 import Sidebar from '../sidebar'
 import useWindowDimensions from '../../functions/functions'
-
+import { Link, Label } from './styles'
 const Layout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(true)
   const { width } = useWindowDimensions()
@@ -15,13 +15,15 @@ const Layout = ({ children }) => {
     return (
       itemsArray.map((item, index) => {
         return (
-          <div key={index} style={{ padding: 8, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: isMobile && 'center' }}>
-            <FontAwesomeIcon style={{ backgroundColor: 'yellow', alignItems: 'flex-start', fontSize: 30 }} color='#fff' icon={item.icon} />
-            {(!isMobile && sidebarOpen) &&
-              <div style={{ alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-                {item.text}
-              </div>}
-          </div>
+          <>
+            <Link
+              style={{ justifyContent: !sidebarOpen && 'center' }}
+              key={index} href='#'
+            >
+              <FontAwesomeIcon style={{ alignItems: 'flex-start', fontSize: 30 }} color='#fff' icon={item.icon} />
+              {(!isMobile && sidebarOpen) && <Label>{item.text}</Label>}
+            </Link>
+          </>
         )
       }))
   }
@@ -31,7 +33,7 @@ const Layout = ({ children }) => {
       { text: 'Alertas', icon: faCoffee },
       { text: 'Mensagens', icon: faStar },
       { text: 'Comentários', icon: faStar },
-      { text: 'Analytics', icon: faStar }
+      { text: 'Analytics', icon: faChartBar }
     ]
 
     return (
@@ -39,7 +41,12 @@ const Layout = ({ children }) => {
         toggleSidebar={() => setSidebarOpen(!sidebarOpen)}
         isOpen={sidebarOpen}
       >
-
+        <Link
+          style={{ justifyContent: 'center' }}
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+        >
+          <FontAwesomeIcon style={{ alignItems: 'center', fontSize: 30 }} color='#fff' icon={faBars} />
+        </Link>
         {renderSideBarItems(itemsArray)}
       </Sidebar>
     )
@@ -47,7 +54,6 @@ const Layout = ({ children }) => {
   return (
     <>
       {sideBarMenu()}
-      <button style={{ marginLeft: 500 }} onClick={() => setSidebarOpen(!sidebarOpen)}> aaa</button>
       <p>{children}</p>
     </>
   )
