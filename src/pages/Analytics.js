@@ -2,20 +2,66 @@ import React from 'react'
 import { Container, Card, HalfCard } from './styles'
 import ReactEcharts from 'echarts-for-react'
 import { useWindowDimensions } from '../functions/functions'
+import { sales } from '../assets/sales.json'
 
 const Analytics = () => {
+  // console.log('sales', sales)
   const { width } = useWindowDimensions()
   const isMobile = width < 812
+  const years = []
+  // sales.map((content) => {
+  Object.entries(sales[0]).map(([title, value]) => {
+    console.log('title', title, 'value', value)
+
+    Object.entries(value).map(([year, item]) => {
+      console.log('year', year, 'item', item)
+      if (year === 'title') return
+
+      Object.entries(item).map(([actualYear, saleYear]) => {
+        if (actualYear === 'CGR') return
+        console.log('actualYear', actualYear, 'saleYear', saleYear)
+
+        years.push(actualYear)
+      })
+    })
+  })
+  // })
+
+  const dataTotal = []
+  const dataEcommerce = []
+  Object.entries(sales[0]).map(([title, value]) => {
+    console.log('title', title, 'value', value)
+
+    Object.entries(value).map(([year, item]) => {
+      console.log('year', year, 'item', item)
+      if (year === 'title') return
+
+      Object.entries(item).map(([actualYear, saleYear]) => {
+        if (actualYear === 'CGR') return
+        console.log('actualYear', actualYear, 'saleYear', saleYear)
+
+        Object.entries(saleYear).map(([saleType, saleValue]) => {
+          console.log('saleType', saleType, 'saleValue', saleValue)
+          saleType === 'total' && dataTotal.push(saleValue)
+          saleType === 'ecommerce' && dataEcommerce.push(saleValue)
+        })
+      })
+    })
+  })
+
+  console.log('dataTotal', dataTotal)
+  console.log('dataEcommerce', dataEcommerce)
+
   const getOption = () => {
     return {
       title: {
-        text: 'aa'
+        text: 'Total'
       },
       tooltip: {
         trigger: 'axis'
       },
       legend: {
-        data: ['primeiro', 'segundo', 'terceiro']
+        data: ['Total', 'Ecommerce']
       },
       grid: {
         left: '3%',
@@ -27,7 +73,7 @@ const Analytics = () => {
         {
           type: 'category',
           boundaryGap: false,
-          data: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
+          data: years
         }
       ],
       yAxis: [
@@ -37,25 +83,18 @@ const Analytics = () => {
       ],
       series: [
         {
-          name: 'primeiro',
+          name: 'Total',
           type: 'line',
           stack: 'Total',
           areaStyle: { normal: {} },
-          data: [120, 132, 101, 134, 90, 230, 210]
+          data: dataTotal
         },
         {
-          name: 'segundo',
+          name: 'Ecommerce',
           type: 'line',
           stack: 'Total',
           areaStyle: { normal: {} },
-          data: [220, 182, 191, 234, 290, 330, 310]
-        },
-        {
-          name: 'terceiro',
-          type: 'line',
-          stack: 'Total',
-          areaStyle: { normal: {} },
-          data: [150, 232, 201, 154, 190, 330, 410]
+          data: dataEcommerce
         }
       ]
     }

@@ -1,5 +1,6 @@
 {
-  "sales": {
+  "sales": [
+    {
     "total": {
       "title": "Total",
       "years": {
@@ -73,8 +74,8 @@
         },
         "CGR": 24.4
       }
-    },
-    "booksAndMagazines": {
+    }},
+    {"booksAndMagazines": {
       "title": "Livros e revistas",
       "years": {
         "1999": {
@@ -147,8 +148,8 @@
         },
         "CGR": 14
       }
-    },
-    "clothing": {
+    }},
+    {"clothing": {
       "title": "Roupas e acessórios",
       "years": {
         "1999": {
@@ -221,8 +222,8 @@
         },
         "CGR": 24.4
       }
-    },
-    "hardware": {
+    }},
+    {"hardware": {
       "title": "Hardware de computadores",
       "years": {
         "1999": {
@@ -295,8 +296,8 @@
         },
         "CGR": 28.8
       }
-    },
-    "software": {
+    }},
+    {"software": {
       "title": "Software de computadores",
       "years": {
         "1999": {
@@ -369,8 +370,8 @@
         },
         "CGR": ""
       }
-    },
-    "healthAndBeautyAids": {
+    }},
+    {"healthAndBeautyAids": {
       "title": "Remédios e produtos de beleza",
       "years": {
         "1999": {
@@ -443,8 +444,8 @@
         },
         "CGR": 32.5
       }
-    },
-    "electronicsAndAppliances": {
+    }},
+    {"electronicsAndAppliances": {
       "title": "Eletrônicos e eletrodomésticos",
       "years": {
         "1999": {
@@ -517,8 +518,8 @@
         },
         "CGR": 28
       }
-    },
-    "foodBeerAndWine": {
+    }},
+    {"foodBeerAndWine": {
       "title": "Comida cerveja e vinho",
       "years": {
         "1999": {
@@ -591,8 +592,8 @@
         },
         "CGR": 24.2
       }
-    },
-    "furniture": {
+    }},
+    {"furniture": {
       "title": "Mobiliário",
       "years": {
         "1999": {
@@ -665,8 +666,8 @@
         },
         "CGR": 31.8
       }
-    },
-    "musicAndVideos": {
+    }},
+    {"musicAndVideos": {
       "title": "Música e vídeos",
       "years": {
         "1999": {
@@ -739,8 +740,8 @@
         },
         "CGR": ""
       }
-    },
-    "officeSupplies": {
+    }},
+    {"officeSupplies": {
       "title": "Equipamento e material de escritório",
       "years": {
         "1999": {
@@ -813,8 +814,8 @@
         },
         "CGR": 18.7
       }
-    },
-    "sportingGoods": {
+    }},
+    {"sportingGoods": {
       "title": "Artigos esportivos",
       "years": {
         "1999": {
@@ -887,8 +888,8 @@
         },
         "CGR": ""
       }
-    },
-    "toysHobbiesAndGames": {
+    }},
+    {"toysHobbiesAndGames": {
       "title": "Brinquedos, Hobbies e jogos",
       "years": {
         "1999": {
@@ -961,8 +962,8 @@
         },
         "CGR": 23.1
       }
-    },
-    "othersMerchandises": {
+    }},
+    {"othersMerchandises": {
       "title": "Outras mercadorias",
       "years": {
         "1999": {
@@ -1035,8 +1036,8 @@
         },
         "CGR": ""
       }
-    },
-    "nonMerchandise": {
+    }},
+    {"nonMerchandise": {
       "title": "Receitas não derivadas de mercadorias",
       "years": {
         "1999": {
@@ -1111,4 +1112,4 @@
       }
     }
   }
-}
+]}
