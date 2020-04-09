@@ -12,18 +12,15 @@ export const Container = styled.div`
   }
 `
 
-export const PurpleSquareContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+export const ContentContainer = styled.div`
+  width: 100%;
+   padding: 16px 32px 0px 32px;
+   
+   @media screen and (max-width: 812px) {
+    padding: 8px 16px 0px 16px;
+  }
 `
-export const PurpleSquare = styled.div`
-  background-color: #B10DC9;
-  margin: 16px;
-  width: 300px;
-  height: 300px;
-  border: solid #000;
-`
+
 const defaultCard = `
   width: 100%;
   height: calc(50vh - 48px);

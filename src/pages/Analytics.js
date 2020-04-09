@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Card } from './styles'
+import { Container, Card, ContentContainer } from './styles'
 import ReactEcharts from 'echarts-for-react'
 import { useWindowDimensions } from '../functions/functions'
 import { sales } from '../assets/sales.json'
@@ -97,7 +97,7 @@ const Analytics = () => {
 
   return (
     <Container>
-      <div style={{ width: '100%', padding: isMobile ? '8px 16px 0px 16px' : '16px 32px 0px 32px' }}>
+      <ContentContainer>
         {saleArray.map((item, index) =>
           <Card key={index} style={{ margin: isMobile ? '8px 0px 16px 0px' : '16px 0px 32px 0px' }}>
             <ReactEcharts
@@ -125,7 +125,7 @@ const Analytics = () => {
             style={{ height: '100%', width: '100%' }}
           />
         </Card> */}
-      </div>
+      </ContentContainer>
     </Container>
   )
 }
