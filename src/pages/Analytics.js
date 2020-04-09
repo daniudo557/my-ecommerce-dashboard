@@ -99,7 +99,7 @@ const Analytics = () => {
     <Container>
       <ContentContainer>
         {saleArray.map((item, index) =>
-          <Card key={index} style={{ margin: isMobile ? '8px 0px 16px 0px' : '16px 0px 32px 0px' }}>
+          <Card key={index}>
             <ReactEcharts
               option={getOption(item)}
               style={{ height: '100%', width: '100%' }}

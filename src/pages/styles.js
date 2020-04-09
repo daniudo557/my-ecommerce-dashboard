@@ -29,6 +29,11 @@ const defaultCard = `
 `
 export const Card = styled.div`
   ${defaultCard}
+  margin: 16px 0px 32px 0px;
+
+  @media screen and (max-width: 812px) {
+    margin: 8px 0px 16px 0px;
+  }
 `
 export const HalfCard = styled.div`
   ${defaultCard}
