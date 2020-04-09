@@ -1,12 +1,9 @@
 import React from 'react'
 import { Container, Card, ContentContainer } from './styles'
 import ReactEcharts from 'echarts-for-react'
-import { useWindowDimensions } from '../functions/functions'
 import { sales } from '../assets/sales.json'
 
 const Analytics = () => {
-  const { width } = useWindowDimensions()
-  const isMobile = width < 812
   const yearsArray = []
 
   // Best way donw there! :)
