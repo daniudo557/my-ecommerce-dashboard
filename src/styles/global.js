@@ -17,6 +17,7 @@ export default createGlobalStyle`
   }
   
   html, body, #root {
+    overflow-x: hidden;
     height: 100%;
     width: 100%;
   }
