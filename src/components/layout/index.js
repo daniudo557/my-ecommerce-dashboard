@@ -25,8 +25,8 @@ const Layout = () => {
   const renderSideBarItems = (itemsArray) => {
     const currrentItemStyle = {
       background: '#039BE5',
-      borderTopRightRadius: 20,
-      borderBottomRightRadius: 20
+      borderTopRightRadius: isMobile ? 5 : 20,
+      borderBottomRightRadius: isMobile ? 5 : 20
     }
     const sidebarClosedStyle = { justifyContent: !sidebarOpen && 'center' }
 
@@ -39,8 +39,8 @@ const Layout = () => {
             key={index}
             to={item.path}
           >
-            <FontAwesomeIcon style={{ alignItems: 'flex-start', fontSize: 30 }} color='#fff' icon={item.icon} />
-            {(!isMobile && sidebarOpen) && <Label>{item.text}</Label>}
+            <FontAwesomeIcon style={{ alignItems: 'flex-start', fontSize: isMobile ? 15 : 30 }} color='#fff' icon={item.icon} />
+            {(sidebarOpen) && <Label>{item.text}</Label>}
           </ItemButton>
         )
       }))
@@ -52,7 +52,7 @@ const Layout = () => {
       isOpen={sidebarOpen}
     >
       <MenuItem onClick={() => setSidebarOpen(!sidebarOpen)}>
-        <FontAwesomeIcon style={{ alignItems: 'center', fontSize: 30 }} color='#fff' icon={faBars} />
+        <FontAwesomeIcon style={{ alignItems: 'center', fontSize: isMobile ? 15 : 30 }} color='#fff' icon={faBars} />
       </MenuItem>
       {renderSideBarItems(itemsArray)}
     </Sidebar>
