@@ -2,15 +2,18 @@ import React from 'react'
 import GlobalStyle from './styles/global'
 import { Container } from './styles'
 import Layout from './components/layout'
+import { withRouter } from 'react-router-dom'
 
-function App () {
+const App = ({ children }) => {
   return (
-    <Layout>
+    <div style={{ display: 'flex', flexDirection: 'row' }}>
+      <GlobalStyle />
+      <Layout />
       <Container>
-        <GlobalStyle />
+        {children}
       </Container>
-    </Layout>
+    </div>
   )
 }
 
-export default App
+export default withRouter(App)

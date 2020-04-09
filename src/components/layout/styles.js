@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const PurpleSquareContainer = styled.div`
 height: 100%;
@@ -12,8 +13,7 @@ width: 30px;
 height: 30px;
 border: solid #000;
 `
-
-export const Link = styled.a`
+const touchableLink = `
   display: flex;
   align-items: center;
   padding: 8px 16px;
@@ -25,6 +25,14 @@ export const Link = styled.a`
   :hover {
     opacity: 0.7;
   }
+`
+export const MenuItem = styled.a`
+  ${touchableLink}
+  justify-content: center;
+`
+
+export const ItemButton = styled(Link)`
+  ${touchableLink}
 `
 
 export const Label = styled.span`

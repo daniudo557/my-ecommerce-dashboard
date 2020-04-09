@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
 export const BigSidebar = styled.div`
-  height: 100%;
-  background-color: navy;
+  height: 100vh;
+  background-color: #2D323E;
   color: white;
   width: 260px;
+
 
   @media screen and (max-width: 812px) {
     background-color:red;
@@ -13,13 +14,9 @@ export const BigSidebar = styled.div`
 `
 
 export const LittleSidebar = styled.div`
-  height: 100%;
-  background-color: navy;
-  opacity: 0.8;
-  color: black;
+  height: 100vh;
+  background-color: #2D323E;
   width: 60px;
-  position: fixed;
-  z-index: 200;
 
   @media screen and (max-width: 812px) {
     background-color:green;

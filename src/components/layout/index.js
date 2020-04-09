@@ -1,61 +1,61 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faStar, faBars, faChartBar } from '@fortawesome/free-solid-svg-icons'
+import { useLocation } from 'react-router-dom'
 
 import Sidebar from '../sidebar'
-import useWindowDimensions from '../../functions/functions'
-import { Link, Label } from './styles'
-const Layout = ({ children }) => {
+import { useWindowDimensions } from '../../functions/functions'
+import { ItemButton, MenuItem, Label } from './styles'
+
+const Layout = () => {
+  const { pathname } = useLocation()
   const [sidebarOpen, setSidebarOpen] = useState(true)
   const { width } = useWindowDimensions()
   const isMobile = width < 812
+  const itemsArray = [
+    { text: 'Favoritos', icon: faStar, path: '/favorites' },
+    { text: 'Alertas', icon: faCoffee, path: '/alerts' },
+    { text: 'Mensagens', icon: faStar, path: '/messages' },
+    { text: 'Comentários', icon: faStar, path: '/comments' },
+    { text: 'Analytics', icon: faChartBar, path: '/analytics' }
+  ]
+
   console.log(width)
 
   const renderSideBarItems = (itemsArray) => {
+    const currrentItemStyle = {
+      background: '#039BE5',
+      borderTopRightRadius: 20,
+      borderBottomRightRadius: 20
+    }
+    const sidebarClosedStyle = { justifyContent: !sidebarOpen && 'center' }
+
     return (
       itemsArray.map((item, index) => {
+        const itemStyle = pathname === item.path ? currrentItemStyle : {}
         return (
-          <>
-            <Link
-              style={{ justifyContent: !sidebarOpen && 'center' }}
-              key={index} href={item.href}
-            >
-              <FontAwesomeIcon style={{ alignItems: 'flex-start', fontSize: 30 }} color='#fff' icon={item.icon} />
-              {(!isMobile && sidebarOpen) && <Label>{item.text}</Label>}
-            </Link>
-          </>
+          <ItemButton
+            style={{ ...itemStyle, ...sidebarClosedStyle }}
+            key={index}
+            to={item.path}
+          >
+            <FontAwesomeIcon style={{ alignItems: 'flex-start', fontSize: 30 }} color='#fff' icon={item.icon} />
+            {(!isMobile && sidebarOpen) && <Label>{item.text}</Label>}
+          </ItemButton>
         )
       }))
   }
-  const sideBarMenu = () => {
-    const itemsArray = [
-      { text: 'Favoritos', icon: faStar, href: '#favorites' },
-      { text: 'Alertas', icon: faCoffee, href: '#alerts' },
-      { text: 'Mensagens', icon: faStar, href: '#messages' },
-      { text: 'Comentários', icon: faStar, href: '#comments' },
-      { text: 'Analytics', icon: faChartBar, href: '#analytics' }
-    ]
 
-    return (
-      <Sidebar
-        toggleSidebar={() => setSidebarOpen(!sidebarOpen)}
-        isOpen={sidebarOpen}
-      >
-        <Link
-          style={{ justifyContent: 'center' }}
-          onClick={() => setSidebarOpen(!sidebarOpen)}
-        >
-          <FontAwesomeIcon style={{ alignItems: 'center', fontSize: 30 }} color='#fff' icon={faBars} />
-        </Link>
-        {renderSideBarItems(itemsArray)}
-      </Sidebar>
-    )
-  }
   return (
-    <>
-      {sideBarMenu()}
-      <p>{children}</p>
-    </>
+    <Sidebar
+      toggleSidebar={() => setSidebarOpen(!sidebarOpen)}
+      isOpen={sidebarOpen}
+    >
+      <MenuItem onClick={() => setSidebarOpen(!sidebarOpen)}>
+        <FontAwesomeIcon style={{ alignItems: 'center', fontSize: 30 }} color='#fff' icon={faBars} />
+      </MenuItem>
+      {renderSideBarItems(itemsArray)}
+    </Sidebar>
   )
 }
 

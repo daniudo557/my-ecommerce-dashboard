@@ -2,7 +2,7 @@ import React from 'react'
 
 const Analytics = () => {
   return (
-    <div>
+    <div style={{ backgroundColor: 'red' }}>
       <header>
         <h1>Página de Analytics</h1>
       </header>

@@ -8,7 +8,6 @@ const Sidebar = ({ children, isOpen }) => {
     isOpen
       ? <BigSidebar>{renderContent()}</BigSidebar>
       : <LittleSidebar>{renderContent()}</LittleSidebar>
-
   )
 }
 
