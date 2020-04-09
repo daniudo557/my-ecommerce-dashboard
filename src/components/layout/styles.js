@@ -19,7 +19,6 @@ const touchableLink = `
   padding: 8px 16px;
   text-decoration: none;
   border-color: rgb(255,255,255, 0.30);
-  border-style: solid none none none;
   border-width: 2px;
 
   :hover {
@@ -28,10 +27,12 @@ const touchableLink = `
 `
 export const MenuItem = styled.a`
   ${touchableLink}
+  background: #1E2129;
   justify-content: center;
 `
 
 export const ItemButton = styled(Link)`
+  border-style: solid none none none;
   ${touchableLink}
 `
 
