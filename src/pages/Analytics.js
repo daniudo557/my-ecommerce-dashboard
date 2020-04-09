@@ -1,8 +1,11 @@
 import React from 'react'
-import { Container, PurpleSquareContainer, PurpleSquare } from './styles'
+import { Container, Card, HalfCard } from './styles'
 import ReactEcharts from 'echarts-for-react'
+import { useWindowDimensions } from '../functions/functions'
 
 const Analytics = () => {
+  const { width } = useWindowDimensions()
+  const isMobile = width < 812
   const getOption = () => {
     return {
       title: {
@@ -14,14 +17,9 @@ const Analytics = () => {
       legend: {
         data: ['primeiro', 'segundo', 'terceiro']
       },
-      toolbox: {
-        feature: {
-          saveAsImage: {}
-        }
-      },
       grid: {
         left: '3%',
-        right: '4%',
+        right: '10%',
         bottom: '3%',
         containLabel: true
       },
@@ -64,19 +62,32 @@ const Analytics = () => {
   }
   return (
     <Container>
-      <div style={{ backgroundColor: 'blue' }}>
-        <PurpleSquareContainer>
+      <div style={{ width: '100%', padding: isMobile ? '0px 16px' : '0px 32px' }}>
+        <Card style={{ margin: isMobile ? '16px 0px 8px 0px' : '32px 0px 16px 0px' }}>
           <ReactEcharts
             option={getOption()}
-            style={{ height: '350px', width: '100%' }}
+            style={{ height: '100%', width: '100%' }}
           />
-          <PurpleSquare />
-          <PurpleSquare />
-        </PurpleSquareContainer>
-        <h1>Página de Analytics</h1>
-        <p>
-        Exemplo de Analytics :)
-        </p>
+        </Card>
+
+        <HalfCard style={{ margin: isMobile ? '16px 8px 16px 0px' : '16px 16px 32px 0px' }}>
+          <ReactEcharts
+            option={getOption()}
+            style={{ height: '100%', width: '100%' }}
+          />
+        </HalfCard>
+        <HalfCard style={{ margin: isMobile ? '16px 0px 16px 8px' : '16px 0px 32px 16px' }}>
+          <ReactEcharts
+            option={getOption()}
+            style={{ height: '100%', width: '100%' }}
+          />
+        </HalfCard>
+        <Card style={{ margin: isMobile ? '16px 0px 8px 0px' : '32px 0px 16px 0px' }}>
+          <ReactEcharts
+            option={getOption()}
+            style={{ height: '100%', width: '100%' }}
+          />
+        </Card>
       </div>
     </Container>
   )
