@@ -1,15 +1,20 @@
 import React from 'react'
-
+import { Container, PurpleSquareContainer, PurpleSquare } from './styles'
 const Analytics = () => {
   return (
-    <div style={{ backgroundColor: 'red', width: '100%', marginLeft: 64 }}>
-      <header>
+    <Container>
+      <div style={{ backgroundColor: 'blue' }}>
+        <PurpleSquareContainer>
+          <PurpleSquare />
+          <PurpleSquare />
+          <PurpleSquare />
+        </PurpleSquareContainer>
         <h1>Página de Analytics</h1>
-      </header>
-      <p>
+        <p>
         Exemplo de Analytics :)
-      </p>
-    </div>
+        </p>
+      </div>
+    </Container>
   )
 }
 export default Analytics

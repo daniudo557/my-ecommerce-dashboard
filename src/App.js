@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom'
 
 const App = ({ children }) => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'row' }}>
+    <div style={{ display: 'flex', flexDirection: 'row', height: '100%' }}>
       <GlobalStyle />
       <Layout />
       {children}
