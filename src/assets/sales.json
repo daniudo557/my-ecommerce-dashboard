@@ -1,0 +1,1114 @@
+{
+  "sales": {
+    "total": {
+      "title": "Total",
+      "years": {
+        "1999": {
+          "total": 94282,
+          "ecommerce": 11615
+        },
+        "2000": {
+          "total": 113790,
+          "ecommerce": 21221
+        },
+        "2001": {
+          "total": 114749,
+          "ecommerce": 25892
+        },
+        "2002": {
+          "total": 122214,
+          "ecommerce": 33764
+        },
+        "2003": {
+          "total": 134304,
+          "ecommerce": 41962
+        },
+        "2004": {
+          "total": 154157,
+          "ecommerce": 52996
+        },
+        "2005": {
+          "total": 175900,
+          "ecommerce": 68114
+        },
+        "2006": {
+          "total": 202251,
+          "ecommerce": 85945
+        },
+        "2007": {
+          "total": 223681,
+          "ecommerce": 105467
+        },
+        "2008": {
+          "total": 229242,
+          "ecommerce": 114642
+        },
+        "2009": {
+          "total": 235625,
+          "ecommerce": 121173
+        },
+        "2010": {
+          "total": 263488,
+          "ecommerce": 143000
+        },
+        "2011": {
+          "total": 294697,
+          "ecommerce": 168919
+        },
+        "2012": {
+          "total": 328655,
+          "ecommerce": 195477
+        },
+        "2013": {
+          "total": 350487,
+          "ecommerce": 221587
+        },
+        "2014": {
+          "total": 386065,
+          "ecommerce": 256269
+        },
+        "2015": {
+          "total": 433692,
+          "ecommerce": 294809
+        },
+        "CGR": 24.4
+      }
+    },
+    "booksAndMagazines": {
+      "title": "Livros e revistas",
+      "years": {
+        "1999": {
+          "total": 3434,
+          "ecommerce": 1439
+        },
+        "2000": {
+          "total": 4297,
+          "ecommerce": 1759
+        },
+        "2001": {
+          "total": 4137,
+          "ecommerce": 1644
+        },
+        "2002": {
+          "total": 4267,
+          "ecommerce": 1787
+        },
+        "2003": {
+          "total": 4446,
+          "ecommerce": 1994
+        },
+        "2004": {
+          "total": 4930,
+          "ecommerce": 2270
+        },
+        "2005": {
+          "total": 5438,
+          "ecommerce": 2903
+        },
+        "2006": {
+          "total": 5980,
+          "ecommerce": 3694
+        },
+        "2007": {
+          "total": 7185,
+          "ecommerce": 5370
+        },
+        "2008": {
+          "total": 7642,
+          "ecommerce": 5599
+        },
+        "2009": {
+          "total": 7569,
+          "ecommerce": 6000
+        },
+        "2010": {
+          "total": 8860,
+          "ecommerce": 7428
+        },
+        "2011": {
+          "total": 10160,
+          "ecommerce": 8773
+        },
+        "2012": {
+          "total": 10991,
+          "ecommerce": 9778
+        },
+        "2013": {
+          "total": 11444,
+          "ecommerce": 10249
+        },
+        "2014": {
+          "total": 11879,
+          "ecommerce": 10828
+        },
+        "2015": {
+          "total": 12583,
+          "ecommerce": 11648
+        },
+        "CGR": 14
+      }
+    },
+    "clothing": {
+      "title": "Roupas e acessórios",
+      "years": {
+        "1999": {
+          "total": 13535,
+          "ecommerce": 909
+        },
+        "2000": {
+          "total": 15415,
+          "ecommerce": 2262
+        },
+        "2001": {
+          "total": 15712,
+          "ecommerce": 3325
+        },
+        "2002": {
+          "total": 14477,
+          "ecommerce": 4545
+        },
+        "2003": {
+          "total": 14497,
+          "ecommerce": 5501
+        },
+        "2004": {
+          "total": 15681,
+          "ecommerce": 7054
+        },
+        "2005": {
+          "total": 18562,
+          "ecommerce": 9463
+        },
+        "2006": {
+          "total": 21075,
+          "ecommerce": 12887
+        },
+        "2007": {
+          "total": 24314,
+          "ecommerce": 16036
+        },
+        "2008": {
+          "total": 25545,
+          "ecommerce": 17637
+        },
+        "2009": {
+          "total": 27300,
+          "ecommerce": 19725
+        },
+        "2010": {
+          "total": 31388,
+          "ecommerce": 23480
+        },
+        "2011": {
+          "total": 35137,
+          "ecommerce": 28196
+        },
+        "2012": {
+          "total": 40451,
+          "ecommerce": 33614
+        },
+        "2013": {
+          "total": 46681,
+          "ecommerce": 40198
+        },
+        "2014": {
+          "total": 53751,
+          "ecommerce": 46830
+        },
+        "2015": {
+          "total": 58188,
+          "ecommerce": 52128
+        },
+        "CGR": 24.4
+      }
+    },
+    "hardware": {
+      "title": "Hardware de computadores",
+      "years": {
+        "1999": {
+          "total": 23846,
+          "ecommerce": 4166
+        },
+        "2000": {
+          "total": 27221,
+          "ecommerce": 6049
+        },
+        "2001": {
+          "total": 21128,
+          "ecommerce": 5419
+        },
+        "2002": {
+          "total": 18718,
+          "ecommerce": 6079
+        },
+        "2003": {
+          "total": 18366,
+          "ecommerce": 6580
+        },
+        "2004": {
+          "total": 20277,
+          "ecommerce": 8006
+        },
+        "2005": {
+          "total": 20601,
+          "ecommerce": 9345
+        },
+        "2006": {
+          "total": 20176,
+          "ecommerce": 10373
+        },
+        "2007": {
+          "total": 22855,
+          "ecommerce": 11694
+        },
+        "2008": {
+          "total": 20923,
+          "ecommerce": 11394
+        },
+        "2009": {
+          "total": 20141,
+          "ecommerce": 11223
+        },
+        "2010": {
+          "total": 22420,
+          "ecommerce": 12080
+        },
+        "2011": {
+          "total": 24948,
+          "ecommerce": 13973
+        },
+        "2012": {
+          "total": 25640,
+          "ecommerce": 14240
+        },
+        "2013": {
+          "total": 26981,
+          "ecommerce": 15330
+        },
+        "2014": {
+          "total": 29527,
+          "ecommerce": 16884
+        },
+        "2015": {
+          "total": "S",
+          "ecommerce": 17459
+        },
+        "CGR": 28.8
+      }
+    },
+    "software": {
+      "title": "Software de computadores",
+      "years": {
+        "1999": {
+          "total": 2809,
+          "ecommerce": 755
+        },
+        "2000": {
+          "total": 3706,
+          "ecommerce": 1109
+        },
+        "2001": {
+          "total": 3983,
+          "ecommerce": 1157
+        },
+        "2002": {
+          "total": 3661,
+          "ecommerce": 1239
+        },
+        "2003": {
+          "total": 2930,
+          "ecommerce": 1192
+        },
+        "2004": {
+          "total": 3089,
+          "ecommerce": 1456
+        },
+        "2005": {
+          "total": 3706,
+          "ecommerce": 1834
+        },
+        "2006": {
+          "total": 3845,
+          "ecommerce": 2023
+        },
+        "2007": {
+          "total": 4597,
+          "ecommerce": 2613
+        },
+        "2008": {
+          "total": 4906,
+          "ecommerce": 2887
+        },
+        "2009": {
+          "total": 5432,
+          "ecommerce": 3440
+        },
+        "2010": {
+          "total": 5834,
+          "ecommerce": 3676
+        },
+        "2011": {
+          "total": 6854,
+          "ecommerce": 4493
+        },
+        "2012": {
+          "total": 8093,
+          "ecommerce": 5425
+        },
+        "2013": {
+          "total": 8329,
+          "ecommerce": 5425
+        },
+        "2014": {
+          "total": 9594,
+          "ecommerce": 6491
+        },
+        "2015": {
+          "total": "S",
+          "ecommerce": "S"
+        },
+        "CGR": ""
+      }
+    },
+    "healthAndBeautyAids": {
+      "title": "Remédios e produtos de beleza",
+      "years": {
+        "1999": {
+          "total": 11557,
+          "ecommerce": 239
+        },
+        "2000": {
+          "total": 15557,
+          "ecommerce": 701
+        },
+        "2001": {
+          "total": 19707,
+          "ecommerce": 25892
+        },
+        "2002": {
+          "total": 27471,
+          "ecommerce": 1849
+        },
+        "2003": {
+          "total": 34783,
+          "ecommerce": 2606
+        },
+        "2004": {
+          "total": 43338,
+          "ecommerce": 3574
+        },
+        "2005": {
+          "total": 49810,
+          "ecommerce": 4270
+        },
+        "2006": {
+          "total": 63305,
+          "ecommerce": 5416
+        },
+        "2007": {
+          "total": 61859,
+          "ecommerce": 6473
+        },
+        "2008": {
+          "total": 64783,
+          "ecommerce": 7586
+        },
+        "2009": {
+          "total": 69164,
+          "ecommerce": 8865
+        },
+        "2010": {
+          "total": 75318,
+          "ecommerce": 10952
+        },
+        "2011": {
+          "total": 82424,
+          "ecommerce": 11845
+        },
+        "2012": {
+          "total": 90714,
+          "ecommerce": 14612
+        },
+        "2013": {
+          "total": 91001,
+          "ecommerce": 17456
+        },
+        "2014": {
+          "total": 93586,
+          "ecommerce": 19112
+        },
+        "2015": {
+          "total": "S",
+          "ecommerce": 21469
+        },
+        "CGR": 32.5
+      }
+    },
+    "electronicsAndAppliances": {
+      "title": "Eletrônicos e eletrodomésticos",
+      "years": {
+        "1999": {
+          "total": 2709,
+          "ecommerce": 504
+        },
+        "2000": {
+          "total": 3641,
+          "ecommerce": 1128
+        },
+        "2001": {
+          "total": 4535,
+          "ecommerce": 1844
+        },
+        "2002": {
+          "total": 5520,
+          "ecommerce": 2704
+        },
+        "2003": {
+          "total": 7151,
+          "ecommerce": 4109
+        },
+        "2004": {
+          "total": 9277,
+          "ecommerce": "S"
+        },
+        "2005": {
+          "total": 10953,
+          "ecommerce": 8084
+        },
+        "2006": {
+          "total": 13925,
+          "ecommerce": 9938
+        },
+        "2007": {
+          "total": 15991,
+          "ecommerce": 11955
+        },
+        "2008": {
+          "total": 17457,
+          "ecommerce": 13670
+        },
+        "2009": {
+          "total": 18798,
+          "ecommerce": 15087
+        },
+        "2010": {
+          "total": 21732,
+          "ecommerce": 17861
+        },
+        "2011": {
+          "total": 24622,
+          "ecommerce": 20975
+        },
+        "2012": {
+          "total": 26573,
+          "ecommerce": 22580
+        },
+        "2013": {
+          "total": 27541,
+          "ecommerce": 23727
+        },
+        "2014": {
+          "total": 28158,
+          "ecommerce": 24234
+        },
+        "2015": {
+          "total": 30016,
+          "ecommerce": 26050
+        },
+        "CGR": 28
+      }
+    },
+    "foodBeerAndWine": {
+      "title": "Comida cerveja e vinho",
+      "years": {
+        "1999": {
+          "total": 1429,
+          "ecommerce": 235
+        },
+        "2000": {
+          "total": 1960,
+          "ecommerce": 591
+        },
+        "2001": {
+          "total": 2037,
+          "ecommerce": 519
+        },
+        "2002": {
+          "total": 2014,
+          "ecommerce": 714
+        },
+        "2003": {
+          "total": 2172,
+          "ecommerce": 820
+        },
+        "2004": {
+          "total": 2520,
+          "ecommerce": 1030
+        },
+        "2005": {
+          "total": 3406,
+          "ecommerce": 1608
+        },
+        "2006": {
+          "total": 4213,
+          "ecommerce": 2280
+        },
+        "2007": {
+          "total": 5132,
+          "ecommerce": 2996
+        },
+        "2008": {
+          "total": 4891,
+          "ecommerce": 3033
+        },
+        "2009": {
+          "total": 4824,
+          "ecommerce": 2966
+        },
+        "2010": {
+          "total": 5267,
+          "ecommerce": 3372
+        },
+        "2011": {
+          "total": 5985,
+          "ecommerce": 3984
+        },
+        "2012": {
+          "total": 7070,
+          "ecommerce": 4934
+        },
+        "2013": {
+          "total": 7783,
+          "ecommerce": 5267
+        },
+        "2014": {
+          "total": 8636,
+          "ecommerce": 6349
+        },
+        "2015": {
+          "total": 9841,
+          "ecommerce": 7579
+        },
+        "CGR": 24.2
+      }
+    },
+    "furniture": {
+      "title": "Mobiliário",
+      "years": {
+        "1999": {
+          "total": 5822,
+          "ecommerce": 350
+        },
+        "2000": {
+          "total": 6556,
+          "ecommerce": 1006
+        },
+        "2001": {
+          "total": 6696,
+          "ecommerce": 1654
+        },
+        "2002": {
+          "total": 7290,
+          "ecommerce": 2412
+        },
+        "2003": {
+          "total": 8057,
+          "ecommerce": 3283
+        },
+        "2004": {
+          "total": 8515,
+          "ecommerce": 4023
+        },
+        "2005": {
+          "total": 10576,
+          "ecommerce": 5620
+        },
+        "2006": {
+          "total": 12028,
+          "ecommerce": 7857
+        },
+        "2007": {
+          "total": 13444,
+          "ecommerce": 9061
+        },
+        "2008": {
+          "total": 13303,
+          "ecommerce": 9540
+        },
+        "2009": {
+          "total": 12759,
+          "ecommerce": 9262
+        },
+        "2010": {
+          "total": 14518,
+          "ecommerce": 11150
+        },
+        "2011": {
+          "total": 16900,
+          "ecommerce": 13536
+        },
+        "2012": {
+          "total": 19420,
+          "ecommerce": 15917
+        },
+        "2013": {
+          "total": 22856,
+          "ecommerce": 19588
+        },
+        "2014": {
+          "total": 26599,
+          "ecommerce": 23311
+        },
+        "2015": {
+          "total": 32369,
+          "ecommerce": 28883
+        },
+        "CGR": 31.8
+      }
+    },
+    "musicAndVideos": {
+      "title": "Música e vídeos",
+      "years": {
+        "1999": {
+          "total": 4250,
+          "ecommerce": 762
+        },
+        "2000": {
+          "total": 4433,
+          "ecommerce": 1154
+        },
+        "2001": {
+          "total": 4083,
+          "ecommerce": 1211
+        },
+        "2002": {
+          "total": 3902,
+          "ecommerce": 1352
+        },
+        "2003": {
+          "total": 3473,
+          "ecommerce": 1384
+        },
+        "2004": {
+          "total": 3591,
+          "ecommerce": 1480
+        },
+        "2005": {
+          "total": 3412,
+          "ecommerce": 1864
+        },
+        "2006": {
+          "total": 3869,
+          "ecommerce": 2605
+        },
+        "2007": {
+          "total": 4638,
+          "ecommerce": 3379
+        },
+        "2008": {
+          "total": 5321,
+          "ecommerce": 4208
+        },
+        "2009": {
+          "total": 6107,
+          "ecommerce": 5064
+        },
+        "2010": {
+          "total": "S",
+          "ecommerce": "S"
+        },
+        "2011": {
+          "total": 8225,
+          "ecommerce": 7241
+        },
+        "2012": {
+          "total": 9914,
+          "ecommerce": 8964
+        },
+        "2013": {
+          "total": 11263,
+          "ecommerce": 10325
+        },
+        "2014": {
+          "total": "S",
+          "ecommerce": "S"
+        },
+        "2015": {
+          "total": "S",
+          "ecommerce": "S"
+        },
+        "CGR": ""
+      }
+    },
+    "officeSupplies": {
+      "title": "Equipamento e material de escritório",
+      "years": {
+        "1999": {
+          "total": 7284,
+          "ecommerce": 592
+        },
+        "2000": {
+          "total": 6600,
+          "ecommerce": 1375
+        },
+        "2001": {
+          "total": 5740,
+          "ecommerce": 1824
+        },
+        "2002": {
+          "total": 5099,
+          "ecommerce": 2285
+        },
+        "2003": {
+          "total": 5194,
+          "ecommerce": 2929
+        },
+        "2004": {
+          "total": "S",
+          "ecommerce": "S"
+        },
+        "2005": {
+          "total": 6112,
+          "ecommerce": 3852
+        },
+        "2006": {
+          "total": 6959,
+          "ecommerce": 4919
+        },
+        "2007": {
+          "total": 8097,
+          "ecommerce": 5922
+        },
+        "2008": {
+          "total": 8183,
+          "ecommerce": 6425
+        },
+        "2009": {
+          "total": 7730,
+          "ecommerce": 5975
+        },
+        "2010": {
+          "total": 7822,
+          "ecommerce": 6009
+        },
+        "2011": {
+          "total": 8136,
+          "ecommerce": 6432
+        },
+        "2012": {
+          "total": 8579,
+          "ecommerce": 6869
+        },
+        "2013": {
+          "total": 8042,
+          "ecommerce": "S"
+        },
+        "2014": {
+          "total": "S",
+          "ecommerce": "S"
+        },
+        "2015": {
+          "total": 10613,
+          "ecommerce": 9236
+        },
+        "CGR": 18.7
+      }
+    },
+    "sportingGoods": {
+      "title": "Artigos esportivos",
+      "years": {
+        "1999": {
+          "total": "NA",
+          "ecommerce": "NA"
+        },
+        "2000": {
+          "total": 1794,
+          "ecommerce": 409
+        },
+        "2001": {
+          "total": 1906,
+          "ecommerce": 517
+        },
+        "2002": {
+          "total": 3073,
+          "ecommerce": 1028
+        },
+        "2003": {
+          "total": 3053,
+          "ecommerce": 1155
+        },
+        "2004": {
+          "total": 3579,
+          "ecommerce": 1430
+        },
+        "2005": {
+          "total": 4179,
+          "ecommerce": 1912
+        },
+        "2006": {
+          "total": 4502,
+          "ecommerce": 2402
+        },
+        "2007": {
+          "total": 5567,
+          "ecommerce": 3178
+        },
+        "2008": {
+          "total": 5824,
+          "ecommerce": 3535
+        },
+        "2009": {
+          "total": 6058,
+          "ecommerce": 3945
+        },
+        "2010": {
+          "total": 6437,
+          "ecommerce": 4408
+        },
+        "2011": {
+          "total": 6982,
+          "ecommerce": 5103
+        },
+        "2012": {
+          "total": 8506,
+          "ecommerce": 6356
+        },
+        "2013": {
+          "total": 9914,
+          "ecommerce": 7927
+        },
+        "2014": {
+          "total": 10910,
+          "ecommerce": 9347
+        },
+        "2015": {
+          "total": 13104,
+          "ecommerce": 11681
+        },
+        "CGR": ""
+      }
+    },
+    "toysHobbiesAndGames": {
+      "title": "Brinquedos, Hobbies e jogos",
+      "years": {
+        "1999": {
+          "total": 2162,
+          "ecommerce": 383
+        },
+        "2000": {
+          "total": 3174,
+          "ecommerce": 806
+        },
+        "2001": {
+          "total": 3138,
+          "ecommerce": 896
+        },
+        "2002": {
+          "total": 3775,
+          "ecommerce": 1259
+        },
+        "2003": {
+          "total": 4049,
+          "ecommerce": 1610
+        },
+        "2004": {
+          "total": 4133,
+          "ecommerce": 1758
+        },
+        "2005": {
+          "total": 4649,
+          "ecommerce": 2240
+        },
+        "2006": {
+          "total": 4638,
+          "ecommerce": 2536
+        },
+        "2007": {
+          "total": 5414,
+          "ecommerce": 3112
+        },
+        "2008": {
+          "total": 5667,
+          "ecommerce": 3445
+        },
+        "2009": {
+          "total": 5384,
+          "ecommerce": 3639
+        },
+        "2010": {
+          "total": 6022,
+          "ecommerce": 4470
+        },
+        "2011": {
+          "total": 6794,
+          "ecommerce": 5260
+        },
+        "2012": {
+          "total": 7801,
+          "ecommerce": 6091
+        },
+        "2013": {
+          "total": 9125,
+          "ecommerce": "S"
+        },
+        "2014": {
+          "total": 10623,
+          "ecommerce": 8997
+        },
+        "2015": {
+          "total": 12110,
+          "ecommerce": 10682
+        },
+        "CGR": 23.1
+      }
+    },
+    "othersMerchandises": {
+      "title": "Outras mercadorias",
+      "years": {
+        "1999": {
+          "total": "NA",
+          "ecommerce": "NA"
+        },
+        "2000": {
+          "total": 16249,
+          "ecommerce": 1866
+        },
+        "2001": {
+          "total": 17676,
+          "ecommerce": 2997
+        },
+        "2002": {
+          "total": 17539,
+          "ecommerce": 4062
+        },
+        "2003": {
+          "total": 19357,
+          "ecommerce": 5548
+        },
+        "2004": {
+          "total": 21632,
+          "ecommerce": 7152
+        },
+        "2005": {
+          "total": 25169,
+          "ecommerce": 9838
+        },
+        "2006": {
+          "total": 26416,
+          "ecommerce": 11979
+        },
+        "2007": {
+          "total": 31145,
+          "ecommerce": 14739
+        },
+        "2008": {
+          "total": 31314,
+          "ecommerce": 16353
+        },
+        "2009": {
+          "total": 30895,
+          "ecommerce": 16613
+        },
+        "2010": {
+          "total": 35221,
+          "ecommerce": 20851
+        },
+        "2011": {
+          "total": 39998,
+          "ecommerce": 25491
+        },
+        "2012": {
+          "total": 44679,
+          "ecommerce": 30045
+        },
+        "2013": {
+          "total": 47981,
+          "ecommerce": 34491
+        },
+        "2014": {
+          "total": 55104,
+          "ecommerce": 41543
+        },
+        "2015": {
+          "total": 68378,
+          "ecommerce": 52893
+        },
+        "CGR": ""
+      }
+    },
+    "nonMerchandise": {
+      "title": "Receitas não derivadas de mercadorias",
+      "years": {
+        "1999": {
+          "total": 1126,
+          "ecommerce": 304
+        },
+        "2000": {
+          "total": 3187,
+          "ecommerce": 1006
+        },
+        "2001": {
+          "total": 4271,
+          "ecommerce": 1763
+        },
+        "2002": {
+          "total": 5408,
+          "ecommerce": 2449
+        },
+        "2003": {
+          "total": 6776,
+          "ecommerce": 3251
+        },
+        "2004": {
+          "total": 8242,
+          "ecommerce": 4379
+        },
+        "2005": {
+          "total": 9327,
+          "ecommerce": 5281
+        },
+        "2006": {
+          "total": 11320,
+          "ecommerce": 7036
+        },
+        "2007": {
+          "total": 13443,
+          "ecommerce": 8939
+        },
+        "2008": {
+          "total": 13483,
+          "ecommerce": 9330
+        },
+        "2009": {
+          "total": 13464,
+          "ecommerce": 9369
+        },
+        "2010": {
+          "total": 15548,
+          "ecommerce": 11222
+        },
+        "2011": {
+          "total": 17532,
+          "ecommerce": 13617
+        },
+        "2012": {
+          "total": 20224,
+          "ecommerce": 16052
+        },
+        "2013": {
+          "total": 21546,
+          "ecommerce": 17721
+        },
+        "2014": {
+          "total": 25500,
+          "ecommerce": 22317
+        },
+        "2015": {
+          "total": 29153,
+          "ecommerce": 26374
+        },
+        "CGR": 32.2
+      }
+    }
+  }
+}
