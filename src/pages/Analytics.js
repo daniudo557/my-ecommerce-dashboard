@@ -1,61 +1,56 @@
 import React from 'react'
-import { Container, Card, HalfCard } from './styles'
+import { Container, Card } from './styles'
 import ReactEcharts from 'echarts-for-react'
 import { useWindowDimensions } from '../functions/functions'
 import { sales } from '../assets/sales.json'
 
 const Analytics = () => {
-  // console.log('sales', sales)
   const { width } = useWindowDimensions()
   const isMobile = width < 812
-  const years = []
-  // sales.map((content) => {
-  Object.entries(sales[0]).map(([title, value]) => {
-    console.log('title', title, 'value', value)
+  const yearsArray = []
 
-    Object.entries(value).map(([year, item]) => {
-      console.log('year', year, 'item', item)
-      if (year === 'title') return
+  // Best way donw there! :)
+  Object.values(sales[0]).map((saleObject) =>
+    Object.entries(saleObject).map(([saleObjectKey, saleObjectValue]) =>
+      saleObjectKey !== 'title' && Object.values(saleObjectValue).map((yearObject) =>
+        Object.keys(yearObject).map((saleYear) => yearsArray.push(saleYear))
+      )
+    )
+  )
 
-      Object.entries(item).map(([actualYear, saleYear]) => {
-        if (actualYear === 'CGR') return
-        console.log('actualYear', actualYear, 'saleYear', saleYear)
+  const saleArray = []
 
-        years.push(actualYear)
-      })
-    })
-  })
-  // })
+  sales.map((saleObject) => {
+    const saleArrayItem = {}
+    const dataArrayTotal = []
+    const dataArrayEcommerce = []
 
-  const dataTotal = []
-  const dataEcommerce = []
-  Object.entries(sales[0]).map(([title, value]) => {
-    console.log('title', title, 'value', value)
+    Object.entries(saleObject).map(([saleLabel, object]) => {
+      Object.assign(saleArrayItem, { label: saleLabel })
 
-    Object.entries(value).map(([year, item]) => {
-      console.log('year', year, 'item', item)
-      if (year === 'title') return
-
-      Object.entries(item).map(([actualYear, saleYear]) => {
-        if (actualYear === 'CGR') return
-        console.log('actualYear', actualYear, 'saleYear', saleYear)
-
-        Object.entries(saleYear).map(([saleType, saleValue]) => {
-          console.log('saleType', saleType, 'saleValue', saleValue)
-          saleType === 'total' && dataTotal.push(saleValue)
-          saleType === 'ecommerce' && dataEcommerce.push(saleValue)
+      return Object.entries(object).map(([saleObjectKey, saleObjectValue]) => {
+        saleObjectKey === 'CGR' && Object.assign(saleArrayItem, { CGR: saleObjectValue })
+        saleObjectKey === 'title' && Object.assign(saleArrayItem, { title: saleObjectValue })
+        return saleObjectKey !== 'title' && Object.values(saleObjectValue).map((yearObject) => {
+          return Object.values(yearObject).map((saleYearObject) =>
+            Object.entries(saleYearObject).map(([saleType, saleValue]) =>
+              saleType === 'total' ? dataArrayTotal.push(saleValue) : dataArrayEcommerce.push(saleValue)
+            )
+          )
         })
       })
     })
+    Object.assign(saleArrayItem, { dataTotal: dataArrayTotal })
+    Object.assign(saleArrayItem, { dataEcommerce: dataArrayEcommerce })
+
+    return saleArray.push(saleArrayItem)
   })
-
-  console.log('dataTotal', dataTotal)
-  console.log('dataEcommerce', dataEcommerce)
-
-  const getOption = () => {
+  console.log(saleArray)
+  console.log(yearsArray)
+  const getOption = (item) => {
     return {
       title: {
-        text: 'Total'
+        text: item.title
       },
       tooltip: {
         trigger: 'axis'
@@ -73,7 +68,7 @@ const Analytics = () => {
         {
           type: 'category',
           boundaryGap: false,
-          data: years
+          data: yearsArray
         }
       ],
       yAxis: [
@@ -87,29 +82,32 @@ const Analytics = () => {
           type: 'line',
           stack: 'Total',
           areaStyle: { normal: {} },
-          data: dataTotal
+          data: item.dataTotal
         },
         {
           name: 'Ecommerce',
           type: 'line',
           stack: 'Total',
           areaStyle: { normal: {} },
-          data: dataEcommerce
+          data: item.dataEcommerce
         }
       ]
     }
   }
+
   return (
     <Container>
-      <div style={{ width: '100%', padding: isMobile ? '0px 16px' : '0px 32px' }}>
-        <Card style={{ margin: isMobile ? '16px 0px 8px 0px' : '32px 0px 16px 0px' }}>
-          <ReactEcharts
-            option={getOption()}
-            style={{ height: '100%', width: '100%' }}
-          />
-        </Card>
+      <div style={{ width: '100%', padding: isMobile ? '8px 16px 0px 16px' : '16px 32px 0px 32px' }}>
+        {saleArray.map((item, index) =>
+          <Card key={index} style={{ margin: isMobile ? '8px 0px 16px 0px' : '16px 0px 32px 0px' }}>
+            <ReactEcharts
+              option={getOption(item)}
+              style={{ height: '100%', width: '100%' }}
+            />
+          </Card>
+        )}
 
-        <HalfCard style={{ margin: isMobile ? '16px 8px 16px 0px' : '16px 16px 32px 0px' }}>
+        {/* <HalfCard style={{ margin: isMobile ? '16px 8px 16px 0px' : '16px 16px 32px 0px' }}>
           <ReactEcharts
             option={getOption()}
             style={{ height: '100%', width: '100%' }}
@@ -120,13 +118,13 @@ const Analytics = () => {
             option={getOption()}
             style={{ height: '100%', width: '100%' }}
           />
-        </HalfCard>
-        <Card style={{ margin: isMobile ? '16px 0px 8px 0px' : '32px 0px 16px 0px' }}>
+        </HalfCard> */}
+        {/* <Card style={{ margin: isMobile ? '16px 0px 8px 0px' : '32px 0px 16px 0px' }}>
           <ReactEcharts
             option={getOption()}
             style={{ height: '100%', width: '100%' }}
           />
-        </Card>
+        </Card> */}
       </div>
     </Container>
   )
