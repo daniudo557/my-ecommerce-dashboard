@@ -15,6 +15,7 @@ const Sidebar = ({ children, isOpen }) => {
       ? <BigSidebar>{renderContent()}</BigSidebar>
       : <LittleSidebar>{renderContent()}</LittleSidebar>
 
+  // This have to be done because sidebar is different to mobile and desktop
   return isMobile ? renderMobileSidebar() : renderDesktopSidebar()
 }
 
