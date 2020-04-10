@@ -12,6 +12,7 @@ const Analytics = () => {
   const yearsArray = getYearsArray()
   const source = getSourcePieGraph(saleArray)
 
+  /* All getOption functions get custom option for each graph that will be renderized */
   const getOptionSaleItem = (item, saleIndex) => {
     return {
       tooltip: {
@@ -26,6 +27,8 @@ const Analytics = () => {
         bottom: isMobile ? '20%' : '25%',
         containLabel: true
       },
+      // This color array maintain "Total" color with the first element of 'colors.saleArray' and the
+      // remaining colors is reffered to the correspondent index of array
       color: [colors.saleArray.slice(-1)[0], colors.saleArray[saleIndex]],
       xAxis: [
         {
@@ -81,6 +84,7 @@ const Analytics = () => {
           ...source
         ]
       },
+      // This color array connect it color to your sale correspondent
       color: colors.saleArray.slice(1),
       xAxis: { type: 'category' },
       yAxis: { gridIndex: 0 },
@@ -182,6 +186,7 @@ const Analytics = () => {
       <ContentContainer>
         <BigCard>
           <CardTitle>Todos os produtos</CardTitle>
+          {/* This have to be done because it has a different design for mobile and desktop */}
           {width >= 600 ? renderDesktopGraphic() : renderMobileGraphic()}
         </BigCard>
         {saleArray.map((item, index) =>
