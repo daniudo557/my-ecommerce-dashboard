@@ -16,9 +16,9 @@ const Analytics = () => {
     const source = []
     saleArray.map(item => {
       const sourceItem = []
-      if (item.title === 'Total') return
+      item.title !== 'Total' &&
       sourceItem.push(item.title, ...item.dataEcommerce)
-      source.push(sourceItem)
+      return source.push(sourceItem)
     })
     return source
   }
