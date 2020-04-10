@@ -11,13 +11,18 @@ const touchableLink = `
   border-width: 2px;
 
   :hover {
-    opacity: 0.7;
+    opacity: 0.3;
   }
 `
 export const MenuItem = styled.a`
   ${touchableLink}
   background: ${colors.darkGray};
   justify-content: center;
+  width: 64px;
+
+  @media screen and (max-width: 812px) {
+    width: 48px;
+  }
 `
 
 export const ItemButton = styled(Link)`
@@ -32,4 +37,15 @@ export const Label = styled.span`
   text-align: center;
   line-height: 1.2;
   color: white;
+`
+export const Header = styled.div`
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #3f3f3f;
+
+  @media screen and (max-width: 812px) {
+    width: 100%;
+  }
 `

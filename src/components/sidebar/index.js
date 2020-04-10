@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { BigSidebar, LittleSidebar } from './styles'
+import { BigSidebar, LittleSidebar, MobileSidebar } from './styles'
 import { useWindowDimensions } from '../../functions/functions'
 
 const Sidebar = ({ children, isOpen }) => {
@@ -8,13 +8,14 @@ const Sidebar = ({ children, isOpen }) => {
   const { width } = useWindowDimensions()
   const isMobile = width <= 812
 
-  if (isMobile) {
-    return <></>
-  }
-  return (isOpen
-    ? <BigSidebar>{renderContent()}</BigSidebar>
-    : <LittleSidebar>{renderContent()}</LittleSidebar>
-  )
+  const renderMobileSidebar = () => isOpen ? <MobileSidebar>{renderContent()}</MobileSidebar> : renderContent()
+
+  const renderDesktopSidebar = () =>
+    isOpen
+      ? <BigSidebar>{renderContent()}</BigSidebar>
+      : <LittleSidebar>{renderContent()}</LittleSidebar>
+
+  return isMobile ? renderMobileSidebar() : renderDesktopSidebar()
 }
 
 export default Sidebar

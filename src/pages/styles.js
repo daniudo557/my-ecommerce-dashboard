@@ -6,10 +6,12 @@ export const Container = styled.div`
   display: flex;
   width: calc(100% - 64px);
   margin-left: 64px;
+  margin-top: 24px;
 
   @media screen and (max-width: 812px) {
     width: 100%;
     margin-left: 0px;
+    margin-top: 0px;
   }
 `
 
