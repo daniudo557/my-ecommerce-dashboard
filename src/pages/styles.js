@@ -37,6 +37,16 @@ export const Card = styled.div`
     margin: 8px 0px 16px 0px;
   }
 `
+export const BigCard = styled.div`
+  ${defaultCard}
+  margin: 16px 0px 32px 0px;
+  height: calc(100vh - 62px);
+
+  @media screen and (max-width: 812px) {
+    margin: 8px 0px 16px 0px;
+  }
+`
+
 export const HalfCard = styled.div`
   ${defaultCard}
   display: inline-block;

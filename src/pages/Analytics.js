@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 
-import { Container, Card, ContentContainer, CardTitle } from './styles'
+import { Container, Card, BigCard, ContentContainer, CardTitle } from './styles'
 import { useWindowDimensions, getSaleArray, getYearsArray, getSourcePieGraph } from '../functions/functions'
 import colors from '../themes/colors'
 
@@ -69,8 +69,6 @@ const Analytics = () => {
         height: width >= 1024 ? 512 : 256,
         left: '60%',
         top: width >= 1024 ? '4%' : '6%',
-        // top: width >= 1024 ? 32 : 56,
-        // bottom: 20,
         data: names,
 
         selected: names
@@ -166,22 +164,25 @@ const Analytics = () => {
       ]
     }
   }
+  const renderDesktopGraphic = () =>
+    <ReactEcharts
+      option={getOption2(saleArray, source)}
+      style={{ height: '100%', width: '100%' }}
+    />
+
+  const renderMobileGraphic = () =>
+    <ReactEcharts
+      option={getOption3(saleArray, source)}
+      style={{ height: '100%', width: '100%' }}
+    />
 
   return (
     <Container>
       <ContentContainer>
-        <Card style={{ height: 'calc(100vh - 48px)' }}>
+        <BigCard>
           <CardTitle>Todos os produtos</CardTitle>
-          {width >= 600
-            ? <ReactEcharts
-              option={getOption2(saleArray, source)}
-              style={{ height: '100%', width: '100%' }}
-            />
-            : <ReactEcharts
-              option={getOption3(saleArray, source)}
-              style={{ height: '100%', width: '100%' }}
-            />}
-        </Card>
+          {width >= 600 ? renderDesktopGraphic() : renderMobileGraphic()}
+        </BigCard>
         {saleArray.map((item, index) =>
           <Card key={index}>
             <CardTitle>{item.title}</CardTitle>
