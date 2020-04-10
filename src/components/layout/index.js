@@ -58,7 +58,7 @@ const Layout = () => {
       <Header>
         {renderBurguerButton()}
         <div style={{ flexDirection: 'row-reverse', display: 'flex', width: '100%' }}>
-          <MenuItem onClick={() => window.location.replace('https://github.com/daniudo557')}>
+          <MenuItem onClick={() => window.location.replace('https://github.com/daniudo557/my-ecommerce-dashboard')}>
             <FontAwesomeIcon style={{ justifyContent: 'center', fontSize: isMobile ? 15 : 30 }} color={colors.white} icon={faSignOutAlt} />
           </MenuItem>
         </div>
