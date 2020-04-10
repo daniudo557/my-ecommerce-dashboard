@@ -2,63 +2,14 @@ import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 
 import { Container, Card, ContentContainer, CardTitle } from './styles'
-import { sales } from '../assets/sales.json'
-import { useWindowDimensions } from '../functions/functions'
+import { useWindowDimensions, getSaleArray, getYearsArray, getSourcePieGraph } from '../functions/functions'
 
 const Analytics = () => {
   const { width } = useWindowDimensions()
+  const saleArray = getSaleArray()
+  const yearsArray = getYearsArray()
+  const source = getSourcePieGraph(saleArray)
 
-  const yearsArray = []
-
-  // Best way donw there! :)
-  Object.values(sales[0]).map((saleObject) =>
-    Object.entries(saleObject).map(([saleObjectKey, saleObjectValue]) =>
-      saleObjectKey !== 'title' && Object.values(saleObjectValue).map((yearObject) =>
-        Object.keys(yearObject).map((saleYear) => yearsArray.push(saleYear))
-      )
-    )
-  )
-
-  const saleArray = []
-
-  sales.map((saleObject) => {
-    const saleArrayItem = {}
-    const dataArrayTotal = []
-    const dataArrayEcommerce = []
-
-    Object.entries(saleObject).map(([saleLabel, object]) => {
-      Object.assign(saleArrayItem, { label: saleLabel })
-
-      return Object.entries(object).map(([saleObjectKey, saleObjectValue]) => {
-        saleObjectKey === 'CGR' && Object.assign(saleArrayItem, { CGR: saleObjectValue })
-        saleObjectKey === 'title' && Object.assign(saleArrayItem, { title: saleObjectValue })
-        return saleObjectKey !== 'title' && Object.values(saleObjectValue).map((yearObject) => {
-          return Object.values(yearObject).map((saleYearObject) =>
-            Object.entries(saleYearObject).map(([saleType, saleValue]) =>
-              saleType === 'total' ? dataArrayTotal.push(saleValue) : dataArrayEcommerce.push(saleValue)
-            )
-          )
-        })
-      })
-    })
-    Object.assign(saleArrayItem, { dataTotal: dataArrayTotal })
-    Object.assign(saleArrayItem, { dataEcommerce: dataArrayEcommerce })
-
-    return saleArray.push(saleArrayItem)
-  })
-  console.log(saleArray)
-  console.log(yearsArray)
-
-  const getSourcePieGraph = () => {
-    const source = []
-    saleArray.map(item => {
-      const sourceItem = []
-      if (item.title === 'Total') return
-      sourceItem.push(item.title, ...item.dataEcommerce)
-      source.push(sourceItem)
-    })
-    return source
-  }
   const getOption = (item) => {
     return {
       tooltip: {
@@ -173,6 +124,7 @@ const Analytics = () => {
       ]
     }
   }
+
   const getOption3 = (item, source) => {
     const names = source.map(item => item[0])
     const nameValue = source.map(item => ({ name: item[0], value: item[3] }))
@@ -214,7 +166,6 @@ const Analytics = () => {
       ]
     }
   }
-  const source = getSourcePieGraph()
 
   return (
     <Container>
@@ -225,11 +176,11 @@ const Analytics = () => {
             ? <ReactEcharts
               option={getOption2(saleArray, source)}
               style={{ height: '100%', width: '100%' }}
-              />
+            />
             : <ReactEcharts
               option={getOption3(saleArray, source)}
               style={{ height: '100%', width: '100%' }}
-              />}
+            />}
         </Card>
         {saleArray.map((item, index) =>
           <Card key={index}>
