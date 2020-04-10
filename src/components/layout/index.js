@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faCoffee, faStar, faBars, faChartBar, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUserAlt, faBars, faChartBar, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 import { useLocation } from 'react-router-dom'
 
 import colors from '../../themes/colors'
@@ -15,9 +15,7 @@ const Layout = () => {
   const isMobile = width <= 812
   const itemsArray = [
     { text: 'Home', icon: faHome, path: '/' },
-    { text: 'Alertas', icon: faCoffee, path: '/alerts' },
-    { text: 'Mensagens', icon: faStar, path: '/messages' },
-    { text: 'Comentários', icon: faStar, path: '/comments' },
+    { text: 'Perfil', icon: faUserAlt, path: '/profile' },
     { text: 'Analytics', icon: faChartBar, path: '/analytics' }
   ]
 
@@ -60,7 +58,7 @@ const Layout = () => {
       <Header>
         {renderBurguerButton()}
         <div style={{ flexDirection: 'row-reverse', display: 'flex', width: '100%' }}>
-          <MenuItem onClick={() => setSidebarOpen(!sidebarOpen)}>
+          <MenuItem onClick={() => window.location.replace('https://github.com/daniudo557')}>
             <FontAwesomeIcon style={{ justifyContent: 'center', fontSize: isMobile ? 15 : 30 }} color={colors.white} icon={faSignOutAlt} />
           </MenuItem>
         </div>
