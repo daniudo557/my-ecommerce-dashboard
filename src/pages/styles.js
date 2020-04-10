@@ -50,6 +50,7 @@ export const CardTitle = styled.h2`
   padding: 16px 0px;
 
   @media screen and (max-width: 812px) {
-     padding: 8px 0px;
+    font-size: 16px; 
+    padding: 8px 0px;
   }
 `

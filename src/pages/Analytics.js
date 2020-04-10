@@ -3,6 +3,7 @@ import ReactEcharts from 'echarts-for-react'
 
 import { Container, Card, ContentContainer, CardTitle } from './styles'
 import { useWindowDimensions, getSaleArray, getYearsArray, getSourcePieGraph } from '../functions/functions'
+import colors from '../themes/colors'
 
 const Analytics = () => {
   const { width } = useWindowDimensions()
@@ -10,7 +11,7 @@ const Analytics = () => {
   const yearsArray = getYearsArray()
   const source = getSourcePieGraph(saleArray)
 
-  const getOption = (item) => {
+  const getOption = (item, saleIndex) => {
     return {
       tooltip: {
         trigger: 'axis'
@@ -23,6 +24,7 @@ const Analytics = () => {
         bottom: '20%',
         containLabel: true
       },
+      color: [colors.saleArray.slice(-1)[0], colors.saleArray[saleIndex]],
       xAxis: [
         {
           type: 'category',
@@ -56,7 +58,6 @@ const Analytics = () => {
 
   const getOption2 = (item, source) => {
     const names = source.map(item => item[0])
-
     return {
       tooltip: {
         trigger: 'item',
@@ -80,8 +81,7 @@ const Analytics = () => {
           ...source
         ]
       },
-      color: ['#F97272', '#F972B3', '#F672F9', '#9D72F9', '#72A8F9', '#72F6F9', '#72F9A8', '#CEF972', '#F9E372',
-        '#F9AB72', '#FF0000', '#00A3FF', '#6100FF', '#00FFA3'],
+      color: colors.saleArray.slice(1),
       xAxis: { type: 'category' },
       yAxis: { gridIndex: 0 },
       grid: {
@@ -126,6 +126,7 @@ const Analytics = () => {
   }
 
   const getOption3 = (item, source) => {
+    colors.saleArray.shift()
     const names = source.map(item => item[0])
     const nameValue = source.map(item => ({ name: item[0], value: item[3] }))
     return {
@@ -145,8 +146,7 @@ const Analytics = () => {
 
         selected: names
       },
-      color: ['#F97272', '#F972B3', '#F672F9', '#9D72F9', '#72A8F9', '#72F6F9', '#72F9A8', '#CEF972', '#F9E372',
-        '#F9AB72', '#FF0000', '#00A3FF', '#6100FF', '#00FFA3'],
+      color: colors.saleArray.slice(1),
       series: [
         {
           type: 'pie',
@@ -186,7 +186,7 @@ const Analytics = () => {
           <Card key={index}>
             <CardTitle>{item.title}</CardTitle>
             <ReactEcharts
-              option={getOption(item)}
+              option={getOption(item, index)}
               style={{ height: '100%', width: '100%' }}
             />
           </Card>
