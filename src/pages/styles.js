@@ -26,7 +26,7 @@ export const ContentContainer = styled.div`
 
 const defaultCard = `
   width: 100%;
-  height: calc(50vh - 48px);
+  height: calc(50vh - 64px);
   background-color: ${colors.white};
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.14);
 `
@@ -37,15 +37,18 @@ export const Card = styled.div`
 
   @media screen and (max-width: 812px) {
     margin: 8px 0px 16px 0px;
+    height: calc(50vh - 24px);
+
   }
 `
 export const BigCard = styled.div`
   ${defaultCard}
   margin: 16px 0px 32px 0px;
-  height: calc(100vh - 62px);
+  height: calc(100vh - 110px);
 
   @media screen and (max-width: 812px) {
-    margin: 8px 0px 16px 0px;
+    margin: 9px 0px 16px 0px;
+    height: calc(100vh - 64px);
   }
 `
 
