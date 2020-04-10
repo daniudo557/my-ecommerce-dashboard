@@ -64,9 +64,6 @@ const Analytics = () => {
   }
   const getOption = (item) => {
     return {
-      title: {
-        text: item.title
-      },
       tooltip: {
         trigger: 'axis'
       },
@@ -74,8 +71,8 @@ const Analytics = () => {
         data: ['Total', 'Ecommerce']
       },
       grid: {
-        left: '6%',
-        bottom: '3%',
+        left: '7%',
+        bottom: '20%',
         containLabel: true
       },
       xAxis: [
@@ -221,7 +218,6 @@ const Analytics = () => {
     }
   }
   const source = getSourcePieGraph()
-  console.log('aaa', source)
 
   return (
     <Container>
@@ -240,31 +236,13 @@ const Analytics = () => {
         </Card>
         {saleArray.map((item, index) =>
           <Card key={index}>
+            <CardTitle>{item.title}</CardTitle>
             <ReactEcharts
               option={getOption(item)}
               style={{ height: '100%', width: '100%' }}
             />
           </Card>
         )}
-
-        {/* <HalfCard style={{ margin: isMobile ? '16px 8px 16px 0px' : '16px 16px 32px 0px' }}>
-          <ReactEcharts
-            option={getOption()}
-            style={{ height: '100%', width: '100%' }}
-          />
-        </HalfCard>
-        <HalfCard style={{ margin: isMobile ? '16px 0px 16px 8px' : '16px 0px 32px 16px' }}>
-          <ReactEcharts
-            option={getOption()}
-            style={{ height: '100%', width: '100%' }}
-          />
-        </HalfCard> */}
-        {/* <Card style={{ margin: isMobile ? '16px 0px 8px 0px' : '32px 0px 16px 0px' }}>
-          <ReactEcharts
-            option={getOption()}
-            style={{ height: '100%', width: '100%' }}
-          />
-        </Card> */}
       </ContentContainer>
     </Container>
   )
