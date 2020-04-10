@@ -98,7 +98,7 @@ const Analytics = () => {
       },
       // This color array connects it color to your sale correspondent
       // It ignores the first element of 'colors.saleArray' because it is reffered to 'Total'
-      color: colors.saleArray.slice(1),
+      color: colors.saleArray,
       xAxis: { type: 'category' },
       yAxis: { gridIndex: 0 },
       grid: {
