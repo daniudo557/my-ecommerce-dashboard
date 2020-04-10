@@ -12,7 +12,7 @@ const Analytics = () => {
   const yearsArray = getYearsArray()
   const source = getSourcePieGraph(saleArray)
 
-  const getOption = (item, saleIndex) => {
+  const getOptionSaleItem = (item, saleIndex) => {
     return {
       tooltip: {
         trigger: 'axis'
@@ -58,8 +58,8 @@ const Analytics = () => {
     }
   }
 
-  const getOption2 = (item, source) => {
-    const names = source.map(item => item[0])
+  const getOptionAllSalesDesktop = (source) => {
+    const saleTitle = source.map(sale => sale[0])
     return {
       tooltip: {
         trigger: 'item',
@@ -71,9 +71,9 @@ const Analytics = () => {
         height: width >= 1024 ? '40%' : '30%',
         left: '60%',
         top: width >= 1024 ? '3%' : '5%',
-        data: names,
+        data: saleTitle,
 
-        selected: names
+        selected: saleTitle
       },
       dataset: {
         source: [
@@ -125,8 +125,8 @@ const Analytics = () => {
     }
   }
 
-  const getOption3 = (item, source) => {
-    const names = source.map(item => item[0])
+  const getOptionAllSalesMobile = (source) => {
+    const saleTitle = source.map(sale => sale[0])
     const nameValue = source.map(item => ({ name: item[0], value: item[3] }))
     return {
       tooltip: {
@@ -141,9 +141,9 @@ const Analytics = () => {
         orient: 'vertical',
         height: width >= 600 ? '100%' : '40%',
         bottom: 64,
-        data: names,
+        data: saleTitle,
 
-        selected: names
+        selected: saleTitle
       },
       color: colors.saleArray.slice(1),
       series: [
@@ -167,13 +167,13 @@ const Analytics = () => {
   }
   const renderDesktopGraphic = () =>
     <ReactEcharts
-      option={getOption2(saleArray, source)}
+      option={getOptionAllSalesDesktop(source)}
       style={{ height: '100%', width: '100%' }}
     />
 
   const renderMobileGraphic = () =>
     <ReactEcharts
-      option={getOption3(saleArray, source)}
+      option={getOptionAllSalesMobile(source)}
       style={{ height: '100%', width: '100%' }}
     />
 
@@ -188,7 +188,7 @@ const Analytics = () => {
           <Card key={index}>
             <CardTitle>{item.title}</CardTitle>
             <ReactEcharts
-              option={getOption(item, index)}
+              option={getOptionSaleItem(item, index)}
               style={{ height: '100%', width: '100%' }}
             />
           </Card>
