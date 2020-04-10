@@ -9,9 +9,9 @@ import { ItemButton, MenuItem, Label } from './styles'
 
 const Layout = () => {
   const { pathname } = useLocation()
-  const [sidebarOpen, setSidebarOpen] = useState(true)
+  const [sidebarOpen, setSidebarOpen] = useState(false)
   const { width } = useWindowDimensions()
-  const isMobile = width < 812
+  const isMobile = width <= 812
   const itemsArray = [
     { text: 'Favoritos', icon: faStar, path: '/favorites' },
     { text: 'Alertas', icon: faCoffee, path: '/alerts' },

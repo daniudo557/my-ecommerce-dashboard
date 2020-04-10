@@ -45,3 +45,11 @@ export const HalfCard = styled.div`
     width: calc(50% - 8px);
   }
 `
+export const CardTitle = styled.h2`
+  text-align: center;
+  padding: 16px 0px;
+
+  @media screen and (max-width: 812px) {
+     padding: 8px 0px;
+  }
+`
