@@ -19,8 +19,6 @@ const Layout = () => {
     { text: 'Analytics', icon: faChartBar, path: '/analytics' }
   ]
 
-  console.log(width)
-
   const renderSideBarItems = (itemsArray) => {
     const currrentItemStyle = {
       background: colors.lightBlue,
