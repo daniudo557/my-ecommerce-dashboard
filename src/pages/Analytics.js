@@ -39,9 +39,9 @@ const Analytics = () => {
         containLabel: true
       },
 
-      // This color array maintains "Total" color with the first element of 'colors.saleArray' and the
+      // This color array maintains "Total" color with the second element of 'colors.saleArray' and the
       // remaining colors is reffered to the correspondent index of array
-      color: [colors.saleArray.slice(-1)[0], colors.saleArray[saleIndex]],
+      color: [colors.saleArray[saleIndex], colors.saleArray.slice(-1)[0]],
       xAxis: [
         {
           type: 'category',
@@ -56,18 +56,18 @@ const Analytics = () => {
       ],
       series: [
         {
-          name: 'Total',
-          type: 'line',
-          stack: 'Total',
-          areaStyle: { normal: {} },
-          data: item.dataTotal
-        },
-        {
           name: 'Ecommerce',
           type: 'line',
           stack: 'Total',
           areaStyle: { normal: {} },
           data: item.dataEcommerce
+        },
+        {
+          name: 'Total',
+          type: 'line',
+          stack: 'Total',
+          areaStyle: { normal: {} },
+          data: item.dataTotal
         }
       ]
     }
