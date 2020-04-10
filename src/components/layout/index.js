@@ -9,6 +9,8 @@ import { useWindowDimensions } from '../../functions/functions'
 import { ItemButton, MenuItem, Label, Header } from './styles'
 
 const Layout = () => {
+  // Using Hooks to open and close sideBar
+  // Initially it is setted with false
   const { pathname } = useLocation()
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const { width } = useWindowDimensions()
@@ -20,7 +22,7 @@ const Layout = () => {
   ]
 
   const renderSideBarItems = (itemsArray) => {
-    const currrentItemStyle = {
+    const selectedItemStyle = {
       background: colors.lightBlue,
       borderTopRightRadius: isMobile ? 5 : 20,
       borderBottomRightRadius: isMobile ? 5 : 20
@@ -29,7 +31,7 @@ const Layout = () => {
 
     return (
       itemsArray.map((item, index) => {
-        const itemStyle = pathname === item.path ? currrentItemStyle : {}
+        const itemStyle = pathname === item.path ? selectedItemStyle : {}
         return (
           <ItemButton
             style={{ ...itemStyle, ...sidebarClosedStyle }}
@@ -61,6 +63,8 @@ const Layout = () => {
           </MenuItem>
         </div>
       </Header>
+
+      {/* This have to be done because sideBarItems are only visible in mobile when the sidebar is open */}
       {isMobile ? sidebarOpen && renderSideBarItems(itemsArray) : renderSideBarItems(itemsArray)}
     </Sidebar>
 
