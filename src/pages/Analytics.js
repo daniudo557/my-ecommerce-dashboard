@@ -8,9 +8,6 @@ import { useWindowDimensions } from '../functions/functions'
 const Analytics = () => {
   const { width } = useWindowDimensions()
 
-  const isMobile = width <= 812
-  console.log(isMobile, width)
-
   const yearsArray = []
 
   // Best way donw there! :)
@@ -228,11 +225,11 @@ const Analytics = () => {
             ? <ReactEcharts
               option={getOption2(saleArray, source)}
               style={{ height: '100%', width: '100%' }}
-            />
+              />
             : <ReactEcharts
               option={getOption3(saleArray, source)}
               style={{ height: '100%', width: '100%' }}
-            />}
+              />}
         </Card>
         {saleArray.map((item, index) =>
           <Card key={index}>
