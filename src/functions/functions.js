@@ -24,6 +24,7 @@ export const useWindowDimensions = () => {
   return windowDimensions
 }
 
+// This function treats imported json and returns a new object much more easy to manipulate
 export const getSaleArray = () => {
   const saleArray = []
   sales.map((saleObject) => {
@@ -54,17 +55,7 @@ export const getSaleArray = () => {
   return saleArray
 }
 
-export const getSourcePieGraph = (saleArray) => {
-  const source = []
-  saleArray.map(item => {
-    const sourceItem = []
-    if (item.title === 'Total') return
-    sourceItem.push(item.title, ...item.dataEcommerce)
-    source.push(sourceItem)
-  })
-  return source
-}
-
+// This function takes imported json and return all years that have in it
 export const getYearsArray = () => {
   const yearsArray = []
   Object.values(sales[0]).map((saleObject) =>

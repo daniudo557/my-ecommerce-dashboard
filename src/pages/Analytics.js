@@ -2,7 +2,7 @@ import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 
 import { Container, Card, BigCard, ContentContainer, CardTitle } from './styles'
-import { useWindowDimensions, getSaleArray, getYearsArray, getSourcePieGraph } from '../functions/functions'
+import { useWindowDimensions, getSaleArray, getYearsArray } from '../functions/functions'
 import colors from '../themes/colors'
 
 const Analytics = () => {
@@ -10,7 +10,18 @@ const Analytics = () => {
   const isMobile = width <= 812
   const saleArray = getSaleArray()
   const yearsArray = getYearsArray()
-  const source = getSourcePieGraph(saleArray)
+
+  // This function treats saleArray to return he expected object of ECharts pie graph
+  const getSourcePieGraph = (saleArray) => {
+    const source = []
+    saleArray.map(item => {
+      const sourceItem = []
+      if (item.title === 'Total') return
+      sourceItem.push(item.title, ...item.dataEcommerce)
+      source.push(sourceItem)
+    })
+    return source
+  }
 
   /* All getOption functions get custom option for each graph that will be renderized */
   const getOptionSaleItem = (item, saleIndex) => {
@@ -27,7 +38,8 @@ const Analytics = () => {
         bottom: isMobile ? '20%' : '25%',
         containLabel: true
       },
-      // This color array maintain "Total" color with the first element of 'colors.saleArray' and the
+
+      // This color array maintains "Total" color with the first element of 'colors.saleArray' and the
       // remaining colors is reffered to the correspondent index of array
       color: [colors.saleArray.slice(-1)[0], colors.saleArray[saleIndex]],
       xAxis: [
@@ -84,7 +96,7 @@ const Analytics = () => {
           ...source
         ]
       },
-      // This color array connect it color to your sale correspondent
+      // This color array connects it color to your sale correspondent
       // It ignores the first element of 'colors.saleArray' because it is reffered to 'Total'
       color: colors.saleArray.slice(1),
       xAxis: { type: 'category' },
@@ -182,6 +194,7 @@ const Analytics = () => {
       style={{ height: '100%', width: '100%' }}
     />
 
+  const source = getSourcePieGraph(saleArray)
   return (
     <Container>
       <ContentContainer>
