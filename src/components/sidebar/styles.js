@@ -1,27 +1,20 @@
 import styled from 'styled-components'
+import colors from '../../themes/colors'
 
-export const BigSidebar = styled.div`
+const sideBarDefault = `
   height: 100vh;
-  background-color: #2D323E;
-  color: white;
-  width: 256px;
+  background-color: ${colors.mediumGray};
+  color: ${colors.white};
   position: fixed;
   z-index: 200;
+`
 
-
-  @media screen and (max-width: 812px) {
-    width: 256px;
-  }
+export const BigSidebar = styled.div`
+  ${sideBarDefault}
+  width: 256px;
 `
 
 export const LittleSidebar = styled.div`
-  height: 100vh;
-  background-color: #2D323E;
+  ${sideBarDefault}
   width: 64px; 
-  position: fixed;
-  z-index: 200;
-  
-  @media screen and (max-width: 812px) {
-    width: 64px;
-  }
 `

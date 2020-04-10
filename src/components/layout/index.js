@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faStar, faBars, faChartBar } from '@fortawesome/free-solid-svg-icons'
 import { useLocation } from 'react-router-dom'
 
+import colors from '../../themes/colors'
 import Sidebar from '../sidebar'
 import { useWindowDimensions } from '../../functions/functions'
 import { ItemButton, MenuItem, Label } from './styles'
@@ -24,7 +25,7 @@ const Layout = () => {
 
   const renderSideBarItems = (itemsArray) => {
     const currrentItemStyle = {
-      background: '#039BE5',
+      background: colors.lightBlue,
       borderTopRightRadius: isMobile ? 5 : 20,
       borderBottomRightRadius: isMobile ? 5 : 20
     }

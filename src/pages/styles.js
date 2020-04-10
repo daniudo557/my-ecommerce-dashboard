@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import colors from '../themes/colors'
 
 export const Container = styled.div`
   justify-content: center;
@@ -24,9 +25,10 @@ export const ContentContainer = styled.div`
 const defaultCard = `
   width: 100%;
   height: calc(50vh - 48px);
-  background-color: #fff;
+  background-color: ${colors.white};
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.14);
 `
+
 export const Card = styled.div`
   ${defaultCard}
   margin: 16px 0px 32px 0px;

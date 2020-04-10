@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import colors from '../themes/colors'
 
 export default createGlobalStyle`
   * {
@@ -11,7 +12,7 @@ export default createGlobalStyle`
   body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    background-color: #F5F5F5;
+    background-color: ${colors.lightGray};
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }

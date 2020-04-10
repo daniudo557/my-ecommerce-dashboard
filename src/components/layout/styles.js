@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import colors from '../../themes/colors'
 
 export const PurpleSquareContainer = styled.div`
 height: 100%;
@@ -27,7 +28,7 @@ const touchableLink = `
 `
 export const MenuItem = styled.a`
   ${touchableLink}
-  background: #1E2129;
+  background: ${colors.darkGray};
   justify-content: center;
 `
 
