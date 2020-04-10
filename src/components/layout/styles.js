@@ -43,7 +43,7 @@ export const Header = styled.div`
   height: 100%;
   display: flex;
   flex-direction: row;
-  background-color: #3f3f3f;
+  background-color: ${colors.gray};
 
   @media screen and (max-width: 812px) {
     width: 100%;
