@@ -1,7 +1,8 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
+
 import GlobalStyle from './styles/global'
 import Layout from './components/layout'
-import { withRouter } from 'react-router-dom'
 import { Container } from './pages/styles'
 
 const App = ({ children }) => {
