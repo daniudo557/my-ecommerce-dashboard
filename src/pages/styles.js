@@ -26,19 +26,18 @@ export const ContentContainer = styled.div`
 
 const defaultCard = `
   width: 100%;
-  height: calc(50vh - 64px);
   background-color: ${colors.white};
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.14);
-`
+  `
 
 export const Card = styled.div`
   ${defaultCard}
   margin: 16px 0px 32px 0px;
+  height: calc(50vh - 64px);
 
   @media screen and (max-width: 812px) {
     margin: 8px 0px 16px 0px;
     height: calc(50vh - 24px);
-
   }
 `
 export const BigCard = styled.div`
@@ -51,17 +50,17 @@ export const BigCard = styled.div`
     height: calc(100vh - 64px);
   }
 `
-
-export const HalfCard = styled.div`
-  ${defaultCard}
-  display: inline-block;
-  vertical-align: middle;
-  width: calc(50% - 16px);
+export const WelcomeCard = styled.div`
+ ${defaultCard}
+  margin: 16px 0px 32px 0px;
+  padding: 64px;
 
   @media screen and (max-width: 812px) {
-    width: calc(50% - 8px);
+    margin: 8px 0px 16px 0px;
+    padding: 32px;
   }
 `
+
 export const CardTitle = styled.h2`
   text-align: center;
   padding: 16px 0px;

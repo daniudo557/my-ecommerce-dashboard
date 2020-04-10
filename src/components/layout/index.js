@@ -57,7 +57,7 @@ const Layout = () => {
       toggleSidebar={() => setSidebarOpen(!sidebarOpen)}
       isOpen={sidebarOpen}
     >
-      <Header style={{ }}>
+      <Header>
         {renderBurguerButton()}
         <div style={{ flexDirection: 'row-reverse', display: 'flex', width: '100%' }}>
           <MenuItem onClick={() => setSidebarOpen(!sidebarOpen)}>
