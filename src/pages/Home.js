@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Container, WelcomeCard, ContentContainer } from './styles'
+import { Container, ResponsiveCard, ContentContainer } from './styles'
 import { useWindowDimensions } from '../functions/functions'
 
 const Home = () => {
@@ -9,14 +9,14 @@ const Home = () => {
   return (
     <Container>
       <ContentContainer>
-        <WelcomeCard>
+        <ResponsiveCard>
           <h2 style={{ textAlign: 'center', fontSize: isMobile ? 25 : 40 }}>Bem vindo(a)!</h2>
           <div style={{ margin: isMobile ? '16px 0px' : '32px 0px' }}>
             <p style={{ fontSize: isMobile ? 22 : 37 }}>
             Este é um dashboard fictício para analisar os dados das vendas de diversas mercadorias desde o ano de 1999 até 2015 nos Estados Unidos.
             </p>
           </div>
-        </WelcomeCard>
+        </ResponsiveCard>
       </ContentContainer>
     </Container>
   )

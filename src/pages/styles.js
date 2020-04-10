@@ -50,7 +50,7 @@ export const BigCard = styled.div`
     height: calc(100vh - 64px);
   }
 `
-export const WelcomeCard = styled.div`
+export const ResponsiveCard = styled.div`
  ${defaultCard}
   margin: 16px 0px 32px 0px;
   padding: 64px;
