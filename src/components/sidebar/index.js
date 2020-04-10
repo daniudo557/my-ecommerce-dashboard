@@ -8,6 +8,7 @@ const Sidebar = ({ children, isOpen }) => {
   const { width } = useWindowDimensions()
   const isMobile = width <= 812
 
+  // In mobile, sidebar is invisible when its closed
   const renderMobileSidebar = () => isOpen ? <MobileSidebar>{renderContent()}</MobileSidebar> : renderContent()
 
   const renderDesktopSidebar = () =>
