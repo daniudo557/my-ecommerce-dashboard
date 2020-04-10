@@ -232,7 +232,7 @@
       "CGR": ""
     }},
     {"officeSupplies": {
-      "title": "Equipamento e material de escritório",
+      "title": "Material de escritório",
       "years": [
         {"1999": { "total": 7284, "ecommerce": 592 }},
         {"2000": { "total": 6600, "ecommerce": 1375 }},
@@ -324,7 +324,7 @@
       "CGR": ""
     }},
     {"nonMerchandise": {
-      "title": "Receitas não derivadas de mercadorias",
+      "title": "Não derivado de mercadorias",
       "years": [
         {"1999": { "total": 1126, "ecommerce": 304 }},
         {"2000": { "total": 3187, "ecommerce": 1006 }},
