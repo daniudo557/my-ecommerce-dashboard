@@ -19,7 +19,6 @@ export const LittleSidebar = styled.div`
   width: 64px; 
 `
 export const MobileSidebar = styled.div`
-  height: 100vh;
   background-color: ${colors.mediumGray};
   color: ${colors.white};
 `
