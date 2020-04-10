@@ -7,6 +7,7 @@ import colors from '../themes/colors'
 
 const Analytics = () => {
   const { width } = useWindowDimensions()
+  const isMobile = width <= 812
   const saleArray = getSaleArray()
   const yearsArray = getYearsArray()
   const source = getSourcePieGraph(saleArray)
@@ -20,8 +21,9 @@ const Analytics = () => {
         data: ['Total', 'Ecommerce']
       },
       grid: {
-        left: '7%',
-        bottom: '20%',
+        left: isMobile ? '3%' : '5%',
+        height: isMobile ? '70%' : '90%',
+        bottom: isMobile ? '20%' : '25%',
         containLabel: true
       },
       color: [colors.saleArray.slice(-1)[0], colors.saleArray[saleIndex]],
@@ -66,9 +68,9 @@ const Analytics = () => {
       legend: {
         type: 'scroll',
         orient: 'vertical',
-        height: width >= 1024 ? 512 : 256,
+        height: width >= 1024 ? '40%' : '30%',
         left: '60%',
-        top: width >= 1024 ? '4%' : '6%',
+        top: width >= 1024 ? '3%' : '5%',
         data: names,
 
         selected: names
@@ -83,7 +85,7 @@ const Analytics = () => {
       xAxis: { type: 'category' },
       yAxis: { gridIndex: 0 },
       grid: {
-        bottom: width >= 1024 ? '12%' : '20%',
+        bottom: width >= 1024 ? '16%' : '20%',
         height: '40%'
       },
       series: [
@@ -138,7 +140,7 @@ const Analytics = () => {
         type: 'scroll',
         orient: 'vertical',
         height: width >= 600 ? '100%' : '40%',
-        bottom: width >= 600 ? 64 : 64,
+        bottom: 64,
         data: names,
 
         selected: names
@@ -148,7 +150,7 @@ const Analytics = () => {
         {
           type: 'pie',
           top: width >= 600 ? 32 : 0,
-          radius: width >= 600 ? '80%' : '70%',
+          radius: width >= 550 ? '55%' : '70%',
           center: ['50%', '25%'],
           data: nameValue,
           label: false,

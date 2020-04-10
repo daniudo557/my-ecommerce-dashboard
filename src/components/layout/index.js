@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faStar, faBars, faChartBar, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faCoffee, faStar, faBars, faChartBar, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 import { useLocation } from 'react-router-dom'
 
 import colors from '../../themes/colors'
@@ -14,7 +14,7 @@ const Layout = () => {
   const { width } = useWindowDimensions()
   const isMobile = width <= 812
   const itemsArray = [
-    { text: 'Favoritos', icon: faStar, path: '/favorites' },
+    { text: 'Home', icon: faHome, path: '/' },
     { text: 'Alertas', icon: faCoffee, path: '/alerts' },
     { text: 'Mensagens', icon: faStar, path: '/messages' },
     { text: 'Comentários', icon: faStar, path: '/comments' },
