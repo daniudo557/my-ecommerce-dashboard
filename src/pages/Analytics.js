@@ -124,7 +124,6 @@ const Analytics = () => {
   }
 
   const getOption3 = (item, source) => {
-    colors.saleArray.shift()
     const names = source.map(item => item[0])
     const nameValue = source.map(item => ({ name: item[0], value: item[3] }))
     return {
