@@ -15,7 +15,7 @@ const Profile = () => {
             <p style={{ fontSize: isMobile ? 22 : 37 }}> Este projeto foi criado e desenvolvido por Daniel Macedo.</p>
             <p style={{ fontSize: isMobile ? 22 : 37 }}> Tecnologias utilizadas: React, ECharts.</p>
             <p style={{ fontSize: isMobile ? 22 : 37 }}>
-              Siga-me no <a href='https://www.linkedin.com/in/macedo-daniel/'>Linkedin</a> e no <a href='https://www.linkedin.com/in/macedo-daniel/'>GitHub.</a>
+              Siga-me no <a href='https://www.linkedin.com/in/macedo-daniel/'>Linkedin</a> e no <a href='https://github.com/daniudo557/'>GitHub.</a>
             </p>
           </div>
         </ResponsiveCard>
